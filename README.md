@@ -22,7 +22,7 @@ Import header.
 ```
 
 ### Initialize
-- make menu Item
+####1. make menu Item
 
 ``` objective-c
 UzysDragMenuItem *item0 = [[UzysDragMenuItem alloc] initWithTitle:@"UzysSlide Menu" image:[UIImage imageNamed:@"0.png"] action:^(UzysDragMenuItem *item) {
@@ -32,14 +32,15 @@ UzysDragMenuItem *item0 = [[UzysDragMenuItem alloc] initWithTitle:@"UzysSlide Me
 item0.tag = 0;
 ```
 
-- make controlview
+####2. make controlview
+
 ``` objective-c
 UzysDragMenuControlView *controlView = [[[NSBundle mainBundle] loadNibNamed:@"UzysDragMenuControlView" owner:self options:nil] lastObject];
     
 [controlView.btnAction addTarget:self action:@selector(actionBtn:) forControlEvents:UIControlEventTouchUpInside];
 ```
 
-- make UzysDragmenu
+####3. make UzysDragmenu
 ``` objective-c
 self.uzysDmenu = [[UzysDragMenu alloc] initWithItems:@[item0,item1,item2]
                                          controlMenu:controlView
