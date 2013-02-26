@@ -48,6 +48,11 @@
 
 -(void)didMoveToSuperview
 {
+
+    if([self observationInfo])
+    {
+        [self removeObserver:self forKeyPath:@"superview.frame"];
+    }
     [self addObserver:self forKeyPath:@"superview.frame" options:NSKeyValueObservingOptionNew context:nil];
 }
 
