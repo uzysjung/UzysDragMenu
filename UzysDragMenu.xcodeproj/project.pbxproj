@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		959A7ADE16DB277700DD305E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959A7ADD16DB277700DD305E /* UIKit.framework */; };
+		959A7AE016DB277700DD305E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959A7ADF16DB277700DD305E /* Foundation.framework */; };
+		959A7AE216DB277700DD305E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959A7AE116DB277700DD305E /* CoreGraphics.framework */; };
+		959A7AE816DB277700DD305E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 959A7AE616DB277700DD305E /* InfoPlist.strings */; };
+		959A7AEA16DB277700DD305E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A7AE916DB277700DD305E /* main.m */; };
+		959A7AEE16DB277700DD305E /* UzysAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A7AED16DB277700DD305E /* UzysAppDelegate.m */; };
+		959A7AF016DB277700DD305E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7AEF16DB277700DD305E /* Default.png */; };
+		959A7AF216DB277700DD305E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7AF116DB277700DD305E /* Default@2x.png */; };
+		959A7AF416DB277700DD305E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7AF316DB277700DD305E /* Default-568h@2x.png */; };
+		959A7AF716DB277700DD305E /* UzysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A7AF616DB277700DD305E /* UzysViewController.m */; };
+		959A7AFA16DB277700DD305E /* UzysViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959A7AF816DB277700DD305E /* UzysViewController.xib */; };
+		959A7B0916DB27C500DD305E /* UzysDragMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A7B0516DB27C500DD305E /* UzysDragMenuItem.m */; };
+		959A7B0A16DB27C500DD305E /* UzysDragMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A7B0716DB27C500DD305E /* UzysDragMenuItemView.m */; };
+		959A7B0B16DB27C500DD305E /* UzysDragMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B0816DB27C500DD305E /* UzysDragMenuItemView.xib */; };
+		959A7B0E16DB2F0900DD305E /* UzysDragMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A7B0D16DB2F0900DD305E /* UzysDragMenu.m */; };
+		959A7B1016DB501100DD305E /* UzysDragMenuControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B0F16DB501100DD305E /* UzysDragMenuControlView.xib */; };
+		959A7B1316DB502400DD305E /* UzysDragMenuControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A7B1216DB502400DD305E /* UzysDragMenuControlView.m */; };
+		959A7B1516DB780C00DD305E /* upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1416DB780C00DD305E /* upArrow.png */; };
+		959A7B1D16DB78FE00DD305E /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1716DB78FE00DD305E /* 0.png */; };
+		959A7B1E16DB78FE00DD305E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1816DB78FE00DD305E /* 1.png */; };
+		959A7B1F16DB78FE00DD305E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1916DB78FE00DD305E /* 2.png */; };
+		959A7B2016DB78FE00DD305E /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1A16DB78FE00DD305E /* 3.png */; };
+		959A7B2116DB78FE00DD305E /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1B16DB78FE00DD305E /* 4.png */; };
+		959A7B2216DB78FE00DD305E /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1C16DB78FE00DD305E /* 5.png */; };
+		959A7B2D16DCB2DF00DD305E /* bgImg.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B2C16DCB2DF00DD305E /* bgImg.PNG */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		959A7ADA16DB277700DD305E /* UzysDragMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UzysDragMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		959A7ADD16DB277700DD305E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		959A7ADF16DB277700DD305E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		959A7AE116DB277700DD305E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		959A7AE516DB277700DD305E /* UzysDragMenu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UzysDragMenu-Info.plist"; sourceTree = "<group>"; };
+		959A7AE716DB277700DD305E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		959A7AE916DB277700DD305E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		959A7AEB16DB277700DD305E /* UzysDragMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UzysDragMenu-Prefix.pch"; sourceTree = "<group>"; };
+		959A7AEC16DB277700DD305E /* UzysAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UzysAppDelegate.h; sourceTree = "<group>"; };
+		959A7AED16DB277700DD305E /* UzysAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UzysAppDelegate.m; sourceTree = "<group>"; };
+		959A7AEF16DB277700DD305E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		959A7AF116DB277700DD305E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		959A7AF316DB277700DD305E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		959A7AF516DB277700DD305E /* UzysViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UzysViewController.h; sourceTree = "<group>"; };
+		959A7AF616DB277700DD305E /* UzysViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UzysViewController.m; sourceTree = "<group>"; };
+		959A7AF916DB277700DD305E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UzysViewController.xib; sourceTree = "<group>"; };
+		959A7B0316DB27C500DD305E /* ARCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCHelper.h; sourceTree = "<group>"; };
+		959A7B0416DB27C500DD305E /* UzysDragMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysDragMenuItem.h; sourceTree = "<group>"; };
+		959A7B0516DB27C500DD305E /* UzysDragMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysDragMenuItem.m; sourceTree = "<group>"; };
+		959A7B0616DB27C500DD305E /* UzysDragMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysDragMenuItemView.h; sourceTree = "<group>"; };
+		959A7B0716DB27C500DD305E /* UzysDragMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysDragMenuItemView.m; sourceTree = "<group>"; };
+		959A7B0816DB27C500DD305E /* UzysDragMenuItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UzysDragMenuItemView.xib; sourceTree = "<group>"; };
+		959A7B0C16DB2F0900DD305E /* UzysDragMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysDragMenu.h; sourceTree = "<group>"; };
+		959A7B0D16DB2F0900DD305E /* UzysDragMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysDragMenu.m; sourceTree = "<group>"; };
+		959A7B0F16DB501100DD305E /* UzysDragMenuControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UzysDragMenuControlView.xib; sourceTree = "<group>"; };
+		959A7B1116DB502400DD305E /* UzysDragMenuControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysDragMenuControlView.h; sourceTree = "<group>"; };
+		959A7B1216DB502400DD305E /* UzysDragMenuControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysDragMenuControlView.m; sourceTree = "<group>"; };
+		959A7B1416DB780C00DD305E /* upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upArrow.png; sourceTree = "<group>"; };
+		959A7B1716DB78FE00DD305E /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		959A7B1816DB78FE00DD305E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		959A7B1916DB78FE00DD305E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		959A7B1A16DB78FE00DD305E /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		959A7B1B16DB78FE00DD305E /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		959A7B1C16DB78FE00DD305E /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		959A7B2C16DCB2DF00DD305E /* bgImg.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bgImg.PNG; path = "../../UzysDragMenu-Git/UzysDragMenu/bgImg.PNG"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		959A7AD716DB277700DD305E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				959A7ADE16DB277700DD305E /* UIKit.framework in Frameworks */,
+				959A7AE016DB277700DD305E /* Foundation.framework in Frameworks */,
+				959A7AE216DB277700DD305E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		959A7AD116DB277700DD305E = {
+			isa = PBXGroup;
+			children = (
+				959A7AE316DB277700DD305E /* UzysDragMenu */,
+				959A7ADC16DB277700DD305E /* Frameworks */,
+				959A7ADB16DB277700DD305E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		959A7ADB16DB277700DD305E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				959A7ADA16DB277700DD305E /* UzysDragMenu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		959A7ADC16DB277700DD305E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				959A7ADD16DB277700DD305E /* UIKit.framework */,
+				959A7ADF16DB277700DD305E /* Foundation.framework */,
+				959A7AE116DB277700DD305E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		959A7AE316DB277700DD305E /* UzysDragMenu */ = {
+			isa = PBXGroup;
+			children = (
+				959A7B2C16DCB2DF00DD305E /* bgImg.PNG */,
+				959A7B1616DB78FE00DD305E /* icons */,
+				959A7B0216DB27C500DD305E /* Library */,
+				959A7AEC16DB277700DD305E /* UzysAppDelegate.h */,
+				959A7AED16DB277700DD305E /* UzysAppDelegate.m */,
+				959A7AF516DB277700DD305E /* UzysViewController.h */,
+				959A7AF616DB277700DD305E /* UzysViewController.m */,
+				959A7AF816DB277700DD305E /* UzysViewController.xib */,
+				959A7AE416DB277700DD305E /* Supporting Files */,
+			);
+			path = UzysDragMenu;
+			sourceTree = "<group>";
+		};
+		959A7AE416DB277700DD305E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				959A7AE516DB277700DD305E /* UzysDragMenu-Info.plist */,
+				959A7AE616DB277700DD305E /* InfoPlist.strings */,
+				959A7AE916DB277700DD305E /* main.m */,
+				959A7AEB16DB277700DD305E /* UzysDragMenu-Prefix.pch */,
+				959A7AEF16DB277700DD305E /* Default.png */,
+				959A7AF116DB277700DD305E /* Default@2x.png */,
+				959A7AF316DB277700DD305E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		959A7B0216DB27C500DD305E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				959A7B1416DB780C00DD305E /* upArrow.png */,
+				959A7B0316DB27C500DD305E /* ARCHelper.h */,
+				959A7B0416DB27C500DD305E /* UzysDragMenuItem.h */,
+				959A7B0516DB27C500DD305E /* UzysDragMenuItem.m */,
+				959A7B0616DB27C500DD305E /* UzysDragMenuItemView.h */,
+				959A7B0716DB27C500DD305E /* UzysDragMenuItemView.m */,
+				959A7B0816DB27C500DD305E /* UzysDragMenuItemView.xib */,
+				959A7B0C16DB2F0900DD305E /* UzysDragMenu.h */,
+				959A7B0D16DB2F0900DD305E /* UzysDragMenu.m */,
+				959A7B0F16DB501100DD305E /* UzysDragMenuControlView.xib */,
+				959A7B1116DB502400DD305E /* UzysDragMenuControlView.h */,
+				959A7B1216DB502400DD305E /* UzysDragMenuControlView.m */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		959A7B1616DB78FE00DD305E /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				959A7B1716DB78FE00DD305E /* 0.png */,
+				959A7B1816DB78FE00DD305E /* 1.png */,
+				959A7B1916DB78FE00DD305E /* 2.png */,
+				959A7B1A16DB78FE00DD305E /* 3.png */,
+				959A7B1B16DB78FE00DD305E /* 4.png */,
+				959A7B1C16DB78FE00DD305E /* 5.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		959A7AD916DB277700DD305E /* UzysDragMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 959A7AFD16DB277700DD305E /* Build configuration list for PBXNativeTarget "UzysDragMenu" */;
+			buildPhases = (
+				959A7AD616DB277700DD305E /* Sources */,
+				959A7AD716DB277700DD305E /* Frameworks */,
+				959A7AD816DB277700DD305E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UzysDragMenu;
+			productName = UzysDragMenu;
+			productReference = 959A7ADA16DB277700DD305E /* UzysDragMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		959A7AD216DB277700DD305E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Uzys;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Uzys;
+			};
+			buildConfigurationList = 959A7AD516DB277700DD305E /* Build configuration list for PBXProject "UzysDragMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 959A7AD116DB277700DD305E;
+			productRefGroup = 959A7ADB16DB277700DD305E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				959A7AD916DB277700DD305E /* UzysDragMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		959A7AD816DB277700DD305E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				959A7AE816DB277700DD305E /* InfoPlist.strings in Resources */,
+				959A7AF016DB277700DD305E /* Default.png in Resources */,
+				959A7AF216DB277700DD305E /* Default@2x.png in Resources */,
+				959A7AF416DB277700DD305E /* Default-568h@2x.png in Resources */,
+				959A7AFA16DB277700DD305E /* UzysViewController.xib in Resources */,
+				959A7B0B16DB27C500DD305E /* UzysDragMenuItemView.xib in Resources */,
+				959A7B1016DB501100DD305E /* UzysDragMenuControlView.xib in Resources */,
+				959A7B1516DB780C00DD305E /* upArrow.png in Resources */,
+				959A7B1D16DB78FE00DD305E /* 0.png in Resources */,
+				959A7B1E16DB78FE00DD305E /* 1.png in Resources */,
+				959A7B1F16DB78FE00DD305E /* 2.png in Resources */,
+				959A7B2016DB78FE00DD305E /* 3.png in Resources */,
+				959A7B2116DB78FE00DD305E /* 4.png in Resources */,
+				959A7B2216DB78FE00DD305E /* 5.png in Resources */,
+				959A7B2D16DCB2DF00DD305E /* bgImg.PNG in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		959A7AD616DB277700DD305E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				959A7AEA16DB277700DD305E /* main.m in Sources */,
+				959A7AEE16DB277700DD305E /* UzysAppDelegate.m in Sources */,
+				959A7AF716DB277700DD305E /* UzysViewController.m in Sources */,
+				959A7B0916DB27C500DD305E /* UzysDragMenuItem.m in Sources */,
+				959A7B0A16DB27C500DD305E /* UzysDragMenuItemView.m in Sources */,
+				959A7B0E16DB2F0900DD305E /* UzysDragMenu.m in Sources */,
+				959A7B1316DB502400DD305E /* UzysDragMenuControlView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		959A7AE616DB277700DD305E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				959A7AE716DB277700DD305E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		959A7AF816DB277700DD305E /* UzysViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				959A7AF916DB277700DD305E /* en */,
+			);
+			name = UzysViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		959A7AFB16DB277700DD305E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		959A7AFC16DB277700DD305E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		959A7AFE16DB277700DD305E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UzysDragMenu/UzysDragMenu-Prefix.pch";
+				INFOPLIST_FILE = "UzysDragMenu/UzysDragMenu-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		959A7AFF16DB277700DD305E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UzysDragMenu/UzysDragMenu-Prefix.pch";
+				INFOPLIST_FILE = "UzysDragMenu/UzysDragMenu-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		959A7AD516DB277700DD305E /* Build configuration list for PBXProject "UzysDragMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				959A7AFB16DB277700DD305E /* Debug */,
+				959A7AFC16DB277700DD305E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		959A7AFD16DB277700DD305E /* Build configuration list for PBXNativeTarget "UzysDragMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				959A7AFE16DB277700DD305E /* Debug */,
+				959A7AFF16DB277700DD305E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 959A7AD216DB277700DD305E /* Project object */;
+}
