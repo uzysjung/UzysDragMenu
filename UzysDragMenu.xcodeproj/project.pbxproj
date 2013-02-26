@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9560726216DCBE6300B3AA15 /* bgImg.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9560726116DCBE6300B3AA15 /* bgImg.PNG */; };
 		959A7ADE16DB277700DD305E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959A7ADD16DB277700DD305E /* UIKit.framework */; };
 		959A7AE016DB277700DD305E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959A7ADF16DB277700DD305E /* Foundation.framework */; };
 		959A7AE216DB277700DD305E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959A7AE116DB277700DD305E /* CoreGraphics.framework */; };
@@ -31,10 +32,10 @@
 		959A7B2016DB78FE00DD305E /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1A16DB78FE00DD305E /* 3.png */; };
 		959A7B2116DB78FE00DD305E /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1B16DB78FE00DD305E /* 4.png */; };
 		959A7B2216DB78FE00DD305E /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1C16DB78FE00DD305E /* 5.png */; };
-		959A7B2D16DCB2DF00DD305E /* bgImg.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B2C16DCB2DF00DD305E /* bgImg.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9560726116DCBE6300B3AA15 /* bgImg.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgImg.PNG; sourceTree = "<group>"; };
 		959A7ADA16DB277700DD305E /* UzysDragMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UzysDragMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A7ADD16DB277700DD305E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		959A7ADF16DB277700DD305E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,7 +70,6 @@
 		959A7B1A16DB78FE00DD305E /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		959A7B1B16DB78FE00DD305E /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		959A7B1C16DB78FE00DD305E /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
-		959A7B2C16DCB2DF00DD305E /* bgImg.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bgImg.PNG; path = "../../UzysDragMenu-Git/UzysDragMenu/bgImg.PNG"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 		959A7AE316DB277700DD305E /* UzysDragMenu */ = {
 			isa = PBXGroup;
 			children = (
-				959A7B2C16DCB2DF00DD305E /* bgImg.PNG */,
+				9560726116DCBE6300B3AA15 /* bgImg.PNG */,
 				959A7B1616DB78FE00DD305E /* icons */,
 				959A7B0216DB27C500DD305E /* Library */,
 				959A7AEC16DB277700DD305E /* UzysAppDelegate.h */,
@@ -241,7 +241,7 @@
 				959A7B2016DB78FE00DD305E /* 3.png in Resources */,
 				959A7B2116DB78FE00DD305E /* 4.png in Resources */,
 				959A7B2216DB78FE00DD305E /* 5.png in Resources */,
-				959A7B2D16DCB2DF00DD305E /* bgImg.PNG in Resources */,
+				9560726216DCBE6300B3AA15 /* bgImg.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +381,7 @@
 				959A7AFF16DB277700DD305E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
