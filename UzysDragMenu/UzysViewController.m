@@ -24,7 +24,7 @@
     self.view.frame = frame;
     
     //*******Icons from http://glyphicons.com/ ***********
-    UzysDragMenuItem *item0 = [[UzysDragMenuItem alloc] initWithTitle:@"UzysSlide Menu" image:[UIImage imageNamed:@"0.png"] action:^(UzysDragMenuItem *item) {
+    UzysDragMenuItem *item0 = [[UzysDragMenuItem alloc] initWithTitle:@"UzysDrag Menu" image:[UIImage imageNamed:@"0.png"] action:^(UzysDragMenuItem *item) {
         NSLog(@"Item: %@", item);
 
     }];
