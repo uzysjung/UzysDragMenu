@@ -2,6 +2,7 @@ UzysDragMenu
 ================
 
 An alternative to the UIImagePickerController editor with extended features.
+
 ![Screenshot](https://github.com/uzysjung/UzysDragMenu/raw/master/UzysDragMenu.png)
 
 **UzysDragMenu features:**
