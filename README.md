@@ -1,7 +1,7 @@
 UzysDragMenu
 ================
 
-An alternative to the UIImagePickerController editor with extended features.
+Drag Menu you can easily open and close using drag gesture.
 
 ![Screenshot](https://github.com/uzysjung/UzysDragMenu/raw/master/UzysDragMenu.png)
 
