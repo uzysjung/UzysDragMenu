@@ -21,23 +21,6 @@
 
 @implementation UzysDragMenu
 
--(id)initWithItems:(NSArray *)items controlMenu:(UIView *)controlView superViewGesture:(BOOL)isSuperViewGesture
-{
-    self = [super init];
-    if(self)
-    {
-        //Initialization code
-        self.userInteractionEnabled = YES;
-        self.pItems = items;
-        self.itemViews = [NSMutableArray array];
-        self.controlView = controlView;
-        self.isSuperViewGesture = isSuperViewGesture;
-        [self setupLayout];
-        [self setupGesture];
-        
-    }
-    return self;
-}
 -(id)initWithItems:(NSArray *)items controlMenu:(UIView *)controlView superViewGesture:(BOOL)isSuperViewGesture showInView:(UIView *)view
 {
     self = [super init];
@@ -58,22 +41,13 @@
 }
 -(void)dealloc
 {
-    [self removeObserver:self forKeyPath:@"superview.frame"];
     [_pItems release];
     [_controlView release];
     [_itemViews release];
     [super ah_dealloc];
 }
 
--(void)didMoveToSuperview
-{
-    
-    if([self observationInfo])
-    {
-        [self removeObserver:self forKeyPath:@"superview.frame"];
-    }
-    [self addObserver:self forKeyPath:@"superview.frame" options:NSKeyValueObservingOptionNew context:nil];
-}
+
 
 -(void)setupGesture
 {
@@ -170,19 +144,6 @@
     }];
 }
 
-#pragma mark - Observe Keypath
-
--(void)observeValueForKeyPath:(NSString *)keyPath
-                     ofObject:(id)object
-                       change:(NSDictionary *)change
-                      context:(void *)context
-{
-    if([keyPath isEqualToString:@"superview.frame"])
-    {
-        [self setupLayout];
-        [self setupGesture];
-    }
-}
 #pragma mark - Gesture Recognizer
 - (void)panGestureAction:(UIPanGestureRecognizer *)recognizer
 {

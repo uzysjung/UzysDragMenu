@@ -13,10 +13,7 @@
 @interface UzysDragMenu : UIView
 
 @property (nonatomic,strong) NSArray *pItems;
-
--(id)initWithItems:(NSArray *)items controlMenu:(UIView *)controlView superViewGesture:(BOOL)isSuperViewGesture;
 -(id)initWithItems:(NSArray *)items controlMenu:(UIView *)controlView superViewGesture:(BOOL)isSuperViewGesture showInView:(UIView *)view;
-
 
 -(void)toggleMenu;
 -(void)openMenu;

@@ -46,7 +46,7 @@
     [controlView.btnAction addTarget:self action:@selector(actionBtn:) forControlEvents:UIControlEventTouchUpInside];
     self.uzysDmenu = [[UzysDragMenu alloc] initWithItems:@[item0,item1,item2]
                                              controlMenu:controlView
-                                        superViewGesture:YES];
+                                        superViewGesture:YES showInView:self.view];
     [self.view addSubview:self.uzysDmenu];
 }
 
