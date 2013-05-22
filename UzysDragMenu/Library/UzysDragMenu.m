@@ -65,7 +65,6 @@
     if(self.isSuperViewGesture)
         [self.superview addGestureRecognizer:panGestureRecognizer];
 
-
 }
 -(void)setupLayout
 {
@@ -87,19 +86,18 @@
     [self setFrame:self.closeFrame];
 
     
-    [self.pItems enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        
+    for( int i=0; i<[self.pItems count]; i++)
+    {
         UzysDragMenuItemView *itemView = [[[NSBundle mainBundle] loadNibNamed:@"UzysDragMenuItemView" owner:self options:nil] lastObject];
-        itemView.item = obj;
-        itemView.frame = CGRectMake(0, self.controlView.bounds.size.height + itemView.bounds.size.height*idx, itemView.bounds.size.width, itemView.bounds.size.height);
+        itemView.item = self.pItems[i];
+        itemView.frame = CGRectMake(0, self.controlView.bounds.size.height + itemView.bounds.size.height*i, itemView.bounds.size.width, itemView.bounds.size.height);
         itemView.userInteractionEnabled = YES;
         itemView.tag = itemView.item.tag;
         
         [self addSubview:itemView];
         [self sendSubviewToBack:itemView];
         [self.itemViews addObject:itemView];
-        
-    }];
+    }
     
     self.controlView.frame = CGRectMake(0, 0, self.controlView.bounds.size.width, self.controlView.bounds.size.height);
     [self addSubview:self.controlView];
@@ -124,7 +122,7 @@
 }
 -(void)openMenu
 {
-    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseIn animations:^{
         
         self.frame = self.openFrame;
     } completion:^(BOOL finished) {
@@ -133,7 +131,7 @@
 }
 -(void)closeMenu
 {
-    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseIn animations:^{
         
         self.frame = self.closeFrame;
     } completion:^(BOOL finished) {
