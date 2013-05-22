@@ -14,6 +14,7 @@
 @property (nonatomic,assign) CGRect openFrame;
 @property (nonatomic,assign) CGRect closeFrame;
 @property (nonatomic,assign) BOOL isSuperViewGesture;
+@property (nonatomic,assign) UIView *showInView;
 -(void)setupLayout;
 -(void)setupGesture;
 @end
@@ -37,6 +38,24 @@
     }
     return self;
 }
+-(id)initWithItems:(NSArray *)items controlMenu:(UIView *)controlView superViewGesture:(BOOL)isSuperViewGesture showInView:(UIView *)view
+{
+    self = [super init];
+    if(self)
+    {
+        //Initialization code
+        self.userInteractionEnabled = YES;
+        self.pItems = items;
+        self.itemViews = [NSMutableArray array];
+        self.controlView = controlView;
+        self.isSuperViewGesture = isSuperViewGesture;
+        self.showInView = view;
+        [self setupLayout];
+        [self setupGesture];
+        
+    }
+    return self;
+}
 -(void)dealloc
 {
     [self removeObserver:self forKeyPath:@"superview.frame"];
@@ -48,7 +67,7 @@
 
 -(void)didMoveToSuperview
 {
-
+    
     if([self observationInfo])
     {
         [self removeObserver:self forKeyPath:@"superview.frame"];
@@ -63,8 +82,14 @@
     panGestureRecognizer.minimumNumberOfTouches = 1;
     [self addGestureRecognizer:panGestureRecognizer];
     if(self.isSuperViewGesture)
-        [self.superview addGestureRecognizer:panGestureRecognizer];
-
+    {
+        if(self.superview)
+            [self.superview addGestureRecognizer:panGestureRecognizer];
+        else
+            [self.showInView addGestureRecognizer:panGestureRecognizer];
+        
+    }
+    
 }
 -(void)setupLayout
 {
@@ -73,18 +98,23 @@
     }];
     [self.itemViews removeAllObjects];
     [self.controlView removeFromSuperview];
-
-
+    
+    
     UzysDragMenuItemView *itemView = [[[NSBundle mainBundle] loadNibNamed:@"UzysDragMenuItemView" owner:self options:nil] lastObject];
     CGFloat menuHeight =itemView.bounds.size.height * ([_pItems count]+1) + self.controlView.bounds.size.height;
     CGFloat menuWidth = itemView.bounds.size.width;
     CGFloat menuYPos = itemView.bounds.size.height * ([_pItems count]+1) ;
-    CGFloat superHeight = self.superview.bounds.size.height;
+    
+    CGFloat superHeight;
+    if(self.superview)
+        superHeight = self.superview.bounds.size.height;
+    else
+        superHeight = self.showInView.bounds.size.height;
     
     self.closeFrame = CGRectMake(0, superHeight - self.controlView.bounds.size.height, menuWidth, menuHeight);
     self.openFrame = CGRectMake(0, superHeight - menuYPos, menuWidth, menuHeight);
     [self setFrame:self.closeFrame];
-
+    
     
     for( int i=0; i<[self.pItems count]; i++)
     {
@@ -98,6 +128,7 @@
         [self sendSubviewToBack:itemView];
         [self.itemViews addObject:itemView];
     }
+    
     
     self.controlView.frame = CGRectMake(0, 0, self.controlView.bounds.size.width, self.controlView.bounds.size.height);
     [self addSubview:self.controlView];
@@ -122,7 +153,7 @@
 }
 -(void)openMenu
 {
-    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:0.1f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseOut animations:^{
         
         self.frame = self.openFrame;
     } completion:^(BOOL finished) {
@@ -131,7 +162,7 @@
 }
 -(void)closeMenu
 {
-    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:0.1f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseOut animations:^{
         
         self.frame = self.closeFrame;
     } completion:^(BOOL finished) {
@@ -172,7 +203,7 @@
         }
         else
         {
-            self.frame = old_rect;            
+            self.frame = old_rect;
         }
         
         [recognizer setTranslation:CGPointZero inView:self.superview];
@@ -189,7 +220,7 @@
             [self openMenu];
         }
     }
-
+    
 }
 
 @end
