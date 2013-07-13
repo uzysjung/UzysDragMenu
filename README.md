@@ -48,3 +48,11 @@ self.uzysDmenu = [[UzysDragMenu alloc] initWithItems:@[item0,item1,item2]
                                     superViewGesture:YES];
 [self.view addSubview:self.uzysDmenu];
 ```
+
+## Contact
+
+[@Uzys.net](http://uzys.net)
+
+## License
+
+See [LICENSE](https://github.com/uzysjung/UzysDragMenu/blob/master/MIT-LICENSE.txt).
