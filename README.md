@@ -51,7 +51,7 @@ self.uzysDmenu = [[UzysDragMenu alloc] initWithItems:@[item0,item1,item2]
 
 ## Contact
 
-[@Uzys.net](http://uzys.net)
+[Uzys.net](http://uzys.net)
 
 ## License
 
