@@ -23,7 +23,7 @@
     CGRect frame = [UIScreen mainScreen].applicationFrame;
     self.view.frame = frame;
     
-    //*******Icons from http://glyphicons.com/ ***********
+    //*******Icons from http://adamwhitcroft.com/climacons/ ***********
     UzysDragMenuItem *item0 = [[UzysDragMenuItem alloc] initWithTitle:@"UzysDrag Menu" image:[UIImage imageNamed:@"a0.png"] action:^(UzysDragMenuItem *item) {
         NSLog(@"Item: %@", item);
 
