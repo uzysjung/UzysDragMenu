@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9560726216DCBE6300B3AA15 /* bgImg.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9560726116DCBE6300B3AA15 /* bgImg.PNG */; };
+		9560726216DCBE6300B3AA15 /* bgImg@2x.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9560726116DCBE6300B3AA15 /* bgImg@2x.PNG */; };
+		95976A2C1793B1BE002504CB /* a0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95976A291793B1BE002504CB /* a0@2x.png */; };
+		95976A2D1793B1BE002504CB /* a1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95976A2A1793B1BE002504CB /* a1@2x.png */; };
+		95976A2E1793B1BE002504CB /* a2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95976A2B1793B1BE002504CB /* a2@2x.png */; };
 		959A7ADE16DB277700DD305E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959A7ADD16DB277700DD305E /* UIKit.framework */; };
 		959A7AE016DB277700DD305E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959A7ADF16DB277700DD305E /* Foundation.framework */; };
 		959A7AE216DB277700DD305E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959A7AE116DB277700DD305E /* CoreGraphics.framework */; };
@@ -25,17 +28,14 @@
 		959A7B0E16DB2F0900DD305E /* UzysDragMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A7B0D16DB2F0900DD305E /* UzysDragMenu.m */; };
 		959A7B1016DB501100DD305E /* UzysDragMenuControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B0F16DB501100DD305E /* UzysDragMenuControlView.xib */; };
 		959A7B1316DB502400DD305E /* UzysDragMenuControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A7B1216DB502400DD305E /* UzysDragMenuControlView.m */; };
-		959A7B1516DB780C00DD305E /* upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1416DB780C00DD305E /* upArrow.png */; };
-		959A7B1D16DB78FE00DD305E /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1716DB78FE00DD305E /* 0.png */; };
-		959A7B1E16DB78FE00DD305E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1816DB78FE00DD305E /* 1.png */; };
-		959A7B1F16DB78FE00DD305E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1916DB78FE00DD305E /* 2.png */; };
-		959A7B2016DB78FE00DD305E /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1A16DB78FE00DD305E /* 3.png */; };
-		959A7B2116DB78FE00DD305E /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1B16DB78FE00DD305E /* 4.png */; };
-		959A7B2216DB78FE00DD305E /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1C16DB78FE00DD305E /* 5.png */; };
+		959A7B1516DB780C00DD305E /* upArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1416DB780C00DD305E /* upArrow@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9560726116DCBE6300B3AA15 /* bgImg.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgImg.PNG; sourceTree = "<group>"; };
+		9560726116DCBE6300B3AA15 /* bgImg@2x.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgImg@2x.PNG"; sourceTree = "<group>"; };
+		95976A291793B1BE002504CB /* a0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "a0@2x.png"; sourceTree = "<group>"; };
+		95976A2A1793B1BE002504CB /* a1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "a1@2x.png"; sourceTree = "<group>"; };
+		95976A2B1793B1BE002504CB /* a2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "a2@2x.png"; sourceTree = "<group>"; };
 		959A7ADA16DB277700DD305E /* UzysDragMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UzysDragMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A7ADD16DB277700DD305E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		959A7ADF16DB277700DD305E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,13 +63,7 @@
 		959A7B0F16DB501100DD305E /* UzysDragMenuControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UzysDragMenuControlView.xib; sourceTree = "<group>"; };
 		959A7B1116DB502400DD305E /* UzysDragMenuControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysDragMenuControlView.h; sourceTree = "<group>"; };
 		959A7B1216DB502400DD305E /* UzysDragMenuControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysDragMenuControlView.m; sourceTree = "<group>"; };
-		959A7B1416DB780C00DD305E /* upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upArrow.png; sourceTree = "<group>"; };
-		959A7B1716DB78FE00DD305E /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
-		959A7B1816DB78FE00DD305E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		959A7B1916DB78FE00DD305E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		959A7B1A16DB78FE00DD305E /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
-		959A7B1B16DB78FE00DD305E /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
-		959A7B1C16DB78FE00DD305E /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		959A7B1416DB780C00DD305E /* upArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upArrow@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +110,7 @@
 		959A7AE316DB277700DD305E /* UzysDragMenu */ = {
 			isa = PBXGroup;
 			children = (
-				9560726116DCBE6300B3AA15 /* bgImg.PNG */,
+				9560726116DCBE6300B3AA15 /* bgImg@2x.PNG */,
 				959A7B1616DB78FE00DD305E /* icons */,
 				959A7B0216DB27C500DD305E /* Library */,
 				959A7AEC16DB277700DD305E /* UzysAppDelegate.h */,
@@ -146,7 +140,7 @@
 		959A7B0216DB27C500DD305E /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				959A7B1416DB780C00DD305E /* upArrow.png */,
+				959A7B1416DB780C00DD305E /* upArrow@2x.png */,
 				959A7B0316DB27C500DD305E /* ARCHelper.h */,
 				959A7B0416DB27C500DD305E /* UzysDragMenuItem.h */,
 				959A7B0516DB27C500DD305E /* UzysDragMenuItem.m */,
@@ -165,12 +159,9 @@
 		959A7B1616DB78FE00DD305E /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				959A7B1716DB78FE00DD305E /* 0.png */,
-				959A7B1816DB78FE00DD305E /* 1.png */,
-				959A7B1916DB78FE00DD305E /* 2.png */,
-				959A7B1A16DB78FE00DD305E /* 3.png */,
-				959A7B1B16DB78FE00DD305E /* 4.png */,
-				959A7B1C16DB78FE00DD305E /* 5.png */,
+				95976A291793B1BE002504CB /* a0@2x.png */,
+				95976A2A1793B1BE002504CB /* a1@2x.png */,
+				95976A2B1793B1BE002504CB /* a2@2x.png */,
 			);
 			path = icons;
 			sourceTree = "<group>";
@@ -234,14 +225,11 @@
 				959A7AFA16DB277700DD305E /* UzysViewController.xib in Resources */,
 				959A7B0B16DB27C500DD305E /* UzysDragMenuItemView.xib in Resources */,
 				959A7B1016DB501100DD305E /* UzysDragMenuControlView.xib in Resources */,
-				959A7B1516DB780C00DD305E /* upArrow.png in Resources */,
-				959A7B1D16DB78FE00DD305E /* 0.png in Resources */,
-				959A7B1E16DB78FE00DD305E /* 1.png in Resources */,
-				959A7B1F16DB78FE00DD305E /* 2.png in Resources */,
-				959A7B2016DB78FE00DD305E /* 3.png in Resources */,
-				959A7B2116DB78FE00DD305E /* 4.png in Resources */,
-				959A7B2216DB78FE00DD305E /* 5.png in Resources */,
-				9560726216DCBE6300B3AA15 /* bgImg.PNG in Resources */,
+				959A7B1516DB780C00DD305E /* upArrow@2x.png in Resources */,
+				9560726216DCBE6300B3AA15 /* bgImg@2x.PNG in Resources */,
+				95976A2C1793B1BE002504CB /* a0@2x.png in Resources */,
+				95976A2D1793B1BE002504CB /* a1@2x.png in Resources */,
+				95976A2E1793B1BE002504CB /* a2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

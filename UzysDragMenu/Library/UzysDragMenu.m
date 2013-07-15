@@ -101,13 +101,14 @@
         [self addSubview:itemView];
         [self sendSubviewToBack:itemView];
         [self.itemViews addObject:itemView];
+//        NSLog(@"itemView Frame %@",NSStringFromCGRect(itemView.frame));
     }
     
     
     self.controlView.frame = CGRectMake(0, 0, self.controlView.bounds.size.width, self.controlView.bounds.size.height);
     [self addSubview:self.controlView];
-    NSLog(@"UzysDMenu Frame %@",NSStringFromCGRect(self.frame));
-    NSLog(@"UzysControlView Frame %@",NSStringFromCGRect(self.controlView.frame));
+//    NSLog(@"UzysDMenu Frame %@",NSStringFromCGRect(self.frame));
+//    NSLog(@"UzysControlView Frame %@",NSStringFromCGRect(self.controlView.frame));
     
 }
 
