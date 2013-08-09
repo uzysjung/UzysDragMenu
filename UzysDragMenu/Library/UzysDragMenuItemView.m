@@ -19,22 +19,32 @@
     return self;
 }
 
-//- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//}
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//}
-//
-//- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//}
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        self.layer.backgroundColor = [UIColor colorWithRed:0.8 green:1 blue:1 alpha:0.8].CGColor;
+    }];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        self.layer.backgroundColor = [UIColor clearColor].CGColor;
+    }];
+}
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if (_item.block) {
         _item.block(_item);
     }
+    [UIView animateWithDuration:0.2 animations:^{
+        self.layer.backgroundColor = [UIColor clearColor].CGColor;
+    }];
+
 }
 
 -(void)setItem:(UzysDragMenuItem *)item

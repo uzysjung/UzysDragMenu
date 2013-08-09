@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UzysDragMenuItem.h"
+#import <QuartzCore/QuartzCore.h>
 @interface UzysDragMenuItemView : UIView<UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) UzysDragMenuItem *item;

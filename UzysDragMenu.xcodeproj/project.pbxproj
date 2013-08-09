@@ -29,6 +29,7 @@
 		959A7B1016DB501100DD305E /* UzysDragMenuControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B0F16DB501100DD305E /* UzysDragMenuControlView.xib */; };
 		959A7B1316DB502400DD305E /* UzysDragMenuControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A7B1216DB502400DD305E /* UzysDragMenuControlView.m */; };
 		959A7B1516DB780C00DD305E /* upArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 959A7B1416DB780C00DD305E /* upArrow@2x.png */; };
+		95BBEDD617B4C43300EAD486 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BBEDD517B4C43300EAD486 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		959A7B1116DB502400DD305E /* UzysDragMenuControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysDragMenuControlView.h; sourceTree = "<group>"; };
 		959A7B1216DB502400DD305E /* UzysDragMenuControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysDragMenuControlView.m; sourceTree = "<group>"; };
 		959A7B1416DB780C00DD305E /* upArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upArrow@2x.png"; sourceTree = "<group>"; };
+		95BBEDD517B4C43300EAD486 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BBEDD617B4C43300EAD486 /* QuartzCore.framework in Frameworks */,
 				959A7ADE16DB277700DD305E /* UIKit.framework in Frameworks */,
 				959A7AE016DB277700DD305E /* Foundation.framework in Frameworks */,
 				959A7AE216DB277700DD305E /* CoreGraphics.framework in Frameworks */,
@@ -83,6 +86,7 @@
 		959A7AD116DB277700DD305E = {
 			isa = PBXGroup;
 			children = (
+				95BBEDD517B4C43300EAD486 /* QuartzCore.framework */,
 				959A7AE316DB277700DD305E /* UzysDragMenu */,
 				959A7ADC16DB277700DD305E /* Frameworks */,
 				959A7ADB16DB277700DD305E /* Products */,
