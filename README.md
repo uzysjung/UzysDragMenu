@@ -3,7 +3,7 @@ UzysDragMenu
 
 Drag Menu you can easily open and close using drag gesture.
 
-![Screenshot](https://github.com/uzysjung/UzysDragMenu/raw/master/UzysDragMenu.png)
+![Screenshot](https://github.com/uzysjung/UzysDragMenu/raw/master/UzysDragMenu.png)  ![Screenshot](https://github.com/uzysjung/UzysDragMenu/raw/master/UzysDragMenu.gif)
 
 **UzysDragMenu features:**
 
