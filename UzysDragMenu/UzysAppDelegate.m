@@ -8,7 +8,7 @@
 
 #import "UzysAppDelegate.h"
 
-#import "UzysViewController.h"
+#import "UzysSelectStyleViewController.h"
 
 @implementation UzysAppDelegate
 
@@ -23,8 +23,13 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[UzysViewController alloc] initWithNibName:@"UzysViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+    
+    
+    self.viewController = [[[UzysSelectStyleViewController alloc] initWithNibName:@"UzysSelectStyleViewController" bundle:nil] autorelease];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    //navController.navigationBarHidden = YES;
+    navController.navigationBar.translucent = YES;
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
 }

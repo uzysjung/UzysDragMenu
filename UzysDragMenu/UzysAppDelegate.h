@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class UzysViewController;
+@class UzysSelectStyleViewController;
 
 @interface UzysAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) UzysViewController *viewController;
+@property (strong, nonatomic) UzysSelectStyleViewController *viewController;
 
 @end
