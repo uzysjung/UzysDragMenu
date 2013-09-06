@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2710415B17D956B500D65DCF /* UzysCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2710415917D956B500D65DCF /* UzysCustomViewController.m */; };
+		2710415E17DA2C0B00D65DCF /* CustomMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710415D17DA2C0B00D65DCF /* CustomMenuView.xib */; };
+		27F2400417D94EBB008F36C7 /* UzysSelectStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F2400217D94EBB008F36C7 /* UzysSelectStyleViewController.m */; };
+		27F2400517D94EBB008F36C7 /* UzysSelectStyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F2400317D94EBB008F36C7 /* UzysSelectStyleViewController.xib */; };
 		9560726216DCBE6300B3AA15 /* bgImg@2x.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9560726116DCBE6300B3AA15 /* bgImg@2x.PNG */; };
 		95976A2C1793B1BE002504CB /* a0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95976A291793B1BE002504CB /* a0@2x.png */; };
 		95976A2D1793B1BE002504CB /* a1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95976A2A1793B1BE002504CB /* a1@2x.png */; };
@@ -33,6 +37,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2710415817D956B500D65DCF /* UzysCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysCustomViewController.h; sourceTree = "<group>"; };
+		2710415917D956B500D65DCF /* UzysCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysCustomViewController.m; sourceTree = "<group>"; };
+		2710415D17DA2C0B00D65DCF /* CustomMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomMenuView.xib; sourceTree = "<group>"; };
+		27F2400117D94EBB008F36C7 /* UzysSelectStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysSelectStyleViewController.h; sourceTree = "<group>"; };
+		27F2400217D94EBB008F36C7 /* UzysSelectStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysSelectStyleViewController.m; sourceTree = "<group>"; };
+		27F2400317D94EBB008F36C7 /* UzysSelectStyleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UzysSelectStyleViewController.xib; sourceTree = "<group>"; };
 		9560726116DCBE6300B3AA15 /* bgImg@2x.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgImg@2x.PNG"; sourceTree = "<group>"; };
 		95976A291793B1BE002504CB /* a0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "a0@2x.png"; sourceTree = "<group>"; };
 		95976A2A1793B1BE002504CB /* a1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "a1@2x.png"; sourceTree = "<group>"; };
@@ -122,6 +132,12 @@
 				959A7AF516DB277700DD305E /* UzysViewController.h */,
 				959A7AF616DB277700DD305E /* UzysViewController.m */,
 				959A7AF816DB277700DD305E /* UzysViewController.xib */,
+				2710415817D956B500D65DCF /* UzysCustomViewController.h */,
+				2710415917D956B500D65DCF /* UzysCustomViewController.m */,
+				27F2400117D94EBB008F36C7 /* UzysSelectStyleViewController.h */,
+				27F2400217D94EBB008F36C7 /* UzysSelectStyleViewController.m */,
+				27F2400317D94EBB008F36C7 /* UzysSelectStyleViewController.xib */,
+				2710415D17DA2C0B00D65DCF /* CustomMenuView.xib */,
 				959A7AE416DB277700DD305E /* Supporting Files */,
 			);
 			path = UzysDragMenu;
@@ -234,6 +250,8 @@
 				95976A2C1793B1BE002504CB /* a0@2x.png in Resources */,
 				95976A2D1793B1BE002504CB /* a1@2x.png in Resources */,
 				95976A2E1793B1BE002504CB /* a2@2x.png in Resources */,
+				27F2400517D94EBB008F36C7 /* UzysSelectStyleViewController.xib in Resources */,
+				2710415E17DA2C0B00D65DCF /* CustomMenuView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +269,8 @@
 				959A7B0A16DB27C500DD305E /* UzysDragMenuItemView.m in Sources */,
 				959A7B0E16DB2F0900DD305E /* UzysDragMenu.m in Sources */,
 				959A7B1316DB502400DD305E /* UzysDragMenuControlView.m in Sources */,
+				27F2400417D94EBB008F36C7 /* UzysSelectStyleViewController.m in Sources */,
+				2710415B17D956B500D65DCF /* UzysCustomViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

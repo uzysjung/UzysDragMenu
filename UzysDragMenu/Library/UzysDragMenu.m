@@ -7,10 +7,12 @@
 //
 
 #import "UzysDragMenu.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface UzysDragMenu()
 @property (nonatomic,strong) NSMutableArray *itemViews;
 @property (nonatomic,strong) UIView *controlView;
+@property (nonatomic,strong) UIView *menuView;
 @property (nonatomic,assign) CGRect openFrame;
 @property (nonatomic,assign) CGRect closeFrame;
 @property (nonatomic,assign) BOOL isSuperViewGesture;
@@ -21,7 +23,8 @@
 
 @implementation UzysDragMenu
 
--(id)initWithItems:(NSArray *)items controlMenu:(UIView *)controlView superViewGesture:(BOOL)isSuperViewGesture showInView:(UIView *)view
+// Designated initializer
+- (id)initWithItems:(NSArray *)items menuView:(UIView *)menuView controlMenu:(UIView *)controlView superViewGesture:(BOOL)isSuperViewGesture showInView:(UIView *)view
 {
     self = [super init];
     if(self)
@@ -33,12 +36,24 @@
         self.controlView = controlView;
         self.isSuperViewGesture = isSuperViewGesture;
         self.showInView = view;
+        self.menuView = menuView;
         [self setupLayout];
         [self setupGesture];
         
     }
     return self;
 }
+
+-(id)initWithItems:(NSArray *)items controlMenu:(UIView *)controlView superViewGesture:(BOOL)isSuperViewGesture showInView:(UIView *)view
+{
+    return [self initWithItems:items menuView:nil controlMenu:controlView superViewGesture:isSuperViewGesture showInView:view];
+}
+
+-(id)initWithMenuView:(UIView *)menuView controlMenu:(UIView *)controlView superViewGesture:(BOOL)isSuperViewGesture showInView:(UIView *)view
+{
+    return [self initWithItems:nil menuView:menuView controlMenu:controlView superViewGesture:isSuperViewGesture showInView:view];
+}
+
 -(void)dealloc
 {
     [_pItems release];
@@ -65,19 +80,64 @@
     }
     
 }
--(void)setupLayout
+
+- (UIView *)buildMenuView
 {
+    CGFloat menuHeight, menuWidth, itemHeight;
+    int numItems;
+    UzysDragMenuItemView *tempItemView = [[[NSBundle mainBundle] loadNibNamed:@"UzysDragMenuItemView" owner:self options:nil] lastObject];
+    itemHeight = tempItemView.bounds.size.height;
+    menuWidth = tempItemView.bounds.size.width;
+    numItems = self.pItems.count;
+    menuHeight = (CGFloat)numItems * itemHeight;
+    
+    // Remove existing views
     [self.itemViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [obj removeFromSuperview];
     }];
     [self.itemViews removeAllObjects];
+    
+    CGRect menuFrame = CGRectMake(0, 0, menuWidth, menuHeight);
+    UIView *menuHolder = [[UIView alloc] initWithFrame:menuFrame];
+    CGRect itemFrame = CGRectMake(0, 0, menuWidth, itemHeight);
+    for (int i = 0; i < numItems; i++)
+    {
+        UzysDragMenuItemView *itemView = [[[NSBundle mainBundle] loadNibNamed:@"UzysDragMenuItemView" owner:self options:nil] lastObject];
+        itemView.item = self.pItems[i];
+        itemView.frame = itemFrame;
+        itemView.userInteractionEnabled = YES;
+        itemView.tag = itemView.item.tag;
+        [menuHolder addSubview:itemView];
+        [self.itemViews addObject:itemView];
+        [menuHolder addSubview:itemView];
+        [menuHolder sendSubviewToBack:itemView];
+        
+        itemFrame.origin.y += itemHeight;
+    }
+    
+    return menuHolder;
+}
+
+-(void)setupLayout
+{
+    UIView *actualMenuView;
+    CGRect menuFrame;
+    CGFloat menuHeight, menuWidth;
+    CGRect controlFrame = self.controlView.bounds;
+    CGFloat controlHeight = controlFrame.size.height;
+    
     [self.controlView removeFromSuperview];
     
+    if (self.menuView) {
+        actualMenuView = self.menuView;
+    } else {
+        actualMenuView = [self buildMenuView];
+    }
+    actualMenuView.autoresizingMask = UIViewAutoresizingNone;
     
-    UzysDragMenuItemView *itemView = [[[NSBundle mainBundle] loadNibNamed:@"UzysDragMenuItemView" owner:self options:nil] lastObject];
-    CGFloat menuHeight =itemView.bounds.size.height * ([_pItems count]+1) + self.controlView.bounds.size.height;
-    CGFloat menuWidth = itemView.bounds.size.width;
-    CGFloat menuYPos = itemView.bounds.size.height * ([_pItems count]+1) ;
+    menuFrame = actualMenuView.frame;
+    menuHeight = menuFrame.size.height;
+    menuWidth = menuFrame.size.width;
     
     CGFloat superHeight;
     if(self.superview)
@@ -85,31 +145,19 @@
     else
         superHeight = self.showInView.bounds.size.height;
     
-    self.closeFrame = CGRectMake(0, superHeight - self.controlView.bounds.size.height, menuWidth, menuHeight);
-    self.openFrame = CGRectMake(0, superHeight - menuYPos, menuWidth, menuHeight);
+    self.closeFrame = CGRectMake(0, superHeight - controlHeight, menuWidth, menuHeight);
+    self.openFrame = CGRectMake(0, superHeight - controlHeight - menuHeight, menuWidth, menuHeight + controlHeight);
+    
     [self setFrame:self.closeFrame];
     
+    menuFrame.origin.y = controlHeight;
+    actualMenuView.frame = menuFrame;
+    [self addSubview:actualMenuView];
+    [self sendSubviewToBack:actualMenuView];
     
-    for( int i=0; i<[self.pItems count]; i++)
-    {
-        UzysDragMenuItemView *itemView = [[[NSBundle mainBundle] loadNibNamed:@"UzysDragMenuItemView" owner:self options:nil] lastObject];
-        itemView.item = self.pItems[i];
-        itemView.frame = CGRectMake(0, self.controlView.bounds.size.height + itemView.bounds.size.height*i, itemView.bounds.size.width, itemView.bounds.size.height);
-        itemView.userInteractionEnabled = YES;
-        itemView.tag = itemView.item.tag;
-        
-        [self addSubview:itemView];
-        [self sendSubviewToBack:itemView];
-        [self.itemViews addObject:itemView];
-//        NSLog(@"itemView Frame %@",NSStringFromCGRect(itemView.frame));
-    }
-    
-    
-    self.controlView.frame = CGRectMake(0, 0, self.controlView.bounds.size.width, self.controlView.bounds.size.height);
+    controlFrame.origin = CGPointMake(0, 0);
+    self.controlView.frame = controlFrame;
     [self addSubview:self.controlView];
-//    NSLog(@"UzysDMenu Frame %@",NSStringFromCGRect(self.frame));
-//    NSLog(@"UzysControlView Frame %@",NSStringFromCGRect(self.controlView.frame));
-    
 }
 
 
@@ -132,7 +180,6 @@
         
         self.frame = self.openFrame;
     } completion:^(BOOL finished) {
-        
     }];
 }
 -(void)closeMenu
