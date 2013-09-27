@@ -9,6 +9,8 @@
 #import "UzysViewController.h"
 #import "UzysDragMenu.h"
 
+#define IS_IOS7 [[[UIDevice currentDevice] systemVersion] floatValue] >= 7
+
 @interface UzysViewController ()
 @property (nonatomic,strong) UzysDragMenu *uzysDmenu;
 @end
@@ -19,8 +21,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    CGRect frame = [UIScreen mainScreen].applicationFrame;
+
+    CGRect frame;
+    if(IS_IOS7)
+    {
+        frame = [UIScreen mainScreen].bounds;
+    }
+    else
+    {
+        frame = [UIScreen mainScreen].applicationFrame;
+    }
     self.view.frame = frame;
     
     //*******Icons from http://adamwhitcroft.com/climacons/ ***********

@@ -84,7 +84,7 @@
         superHeight = self.superview.bounds.size.height;
     else
         superHeight = self.showInView.bounds.size.height;
-    
+    NSLog(@"height %f",superHeight);
     self.closeFrame = CGRectMake(0, superHeight - self.controlView.bounds.size.height, menuWidth, menuHeight);
     self.openFrame = CGRectMake(0, superHeight - menuYPos, menuWidth, menuHeight);
     [self setFrame:self.closeFrame];
