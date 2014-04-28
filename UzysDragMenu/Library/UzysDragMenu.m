@@ -9,7 +9,6 @@
 #import "UzysDragMenu.h"
 
 @interface UzysDragMenu()
-@property (nonatomic,strong) NSMutableArray *itemViews;
 @property (nonatomic,strong) UIView *controlView;
 @property (nonatomic,assign) CGRect openFrame;
 @property (nonatomic,assign) CGRect closeFrame;
@@ -28,12 +27,14 @@
     {
         //Initialization code
         self.userInteractionEnabled = YES;
-        self.pItems = items;
-        self.itemViews = [NSMutableArray array];
+
         self.controlView = controlView;
         self.isSuperViewGesture = isSuperViewGesture;
         self.showInView = view;
-        [self setupLayout];
+        self.itemViews = [NSMutableArray array];
+
+        self.pItems = items;
+        //[self setupLayout];
         [self setupGesture];
         
     }
@@ -47,7 +48,15 @@
     [super ah_dealloc];
 }
 
+- (void)setPItems:(NSArray*)pItems
+{
+    if (pItems != _pItems)
+    {
+        _pItems = pItems;
 
+        [self setupLayout];
+    }
+}
 
 -(void)setupGesture
 {
@@ -84,7 +93,7 @@
         superHeight = self.superview.bounds.size.height;
     else
         superHeight = self.showInView.bounds.size.height;
-    NSLog(@"height %f",superHeight);
+    
     self.closeFrame = CGRectMake(0, superHeight - self.controlView.bounds.size.height, menuWidth, menuHeight);
     self.openFrame = CGRectMake(0, superHeight - menuYPos, menuWidth, menuHeight);
     [self setFrame:self.closeFrame];
@@ -115,9 +124,13 @@
 
 #pragma mark - menu
 
+-(BOOL)isMenuOpened
+{
+    return (CGRectEqualToRect(self.frame, self.openFrame));
+}
 -(void)toggleMenu
 {
-    if(CGRectEqualToRect(self.frame, self.openFrame))
+    if([self isMenuOpened])
     {
         [self closeMenu];
     }
@@ -128,7 +141,7 @@
 }
 -(void)openMenu
 {
-    [UIView animateWithDuration:0.1f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseInOut animations:^{
         
         self.frame = self.openFrame;
     } completion:^(BOOL finished) {
@@ -137,7 +150,7 @@
 }
 -(void)closeMenu
 {
-    [UIView animateWithDuration:0.1f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseInOut animations:^{
         
         self.frame = self.closeFrame;
     } completion:^(BOOL finished) {
